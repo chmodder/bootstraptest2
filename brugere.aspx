@@ -3,5 +3,37 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+        <table class="table table-striped">
+
+        <tr>
+            <th>Id</th>
+            <th>Navn</th>
+            <th>Email</th>
+            <th>Telefon</th>
+            <th>Password</th>
+        </tr>
+
+    <asp:Repeater ID="RepeaterBrugere" DataSourceID="SqlDataBrugere" runat="server"></asp:Repeater>
+
+    
+
+
+        <>
+
+            <tr>
+                <th><%# Eval ("Id") %></th>
+                <th><%# Eval ("navn") %></th>
+                <th><%# Eval ("email") %></th>
+                <th><%# Eval ("telefon") %></th>
+                <th><%# Eval ("password") %></th>
+            </tr>
+
+        </>
+
+
+
+    </table>
+
 </asp:Content>
 
