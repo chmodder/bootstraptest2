@@ -4,6 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+
         <table class="table table-striped">
 
         <tr>
@@ -19,7 +21,7 @@
     
 
 
-        <>
+        <ItemTemplate>
 
             <tr>
                 <th><%# Eval ("Id") %></th>
@@ -29,7 +31,7 @@
                 <th><%# Eval ("password") %></th>
             </tr>
 
-        </>
+        </ItemTemplate>
 
 
 
