@@ -22,11 +22,11 @@ public partial class _Default : System.Web.UI.Page
         cmd.Connection = conn;
 
         // SQL strengen
-        cmd.CommandText = "SELECT * FROM [brugere] WHERE [navn] = @navn AND [password] = @password";
+        cmd.CommandText = "SELECT * FROM [brugere] WHERE [brugernavn] = @brugernavn AND [password] LIKE @password";
 
         // Tilføj parametrer (input fra brugeren / TextBox fra .aspx siden) til din SQL streng
-        cmd.Parameters.Add("@navn", SqlDbType.NVarChar).Value = inputEmail1.Text;
-        cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = inputPassword1.Text;
+        cmd.Parameters.Add("@brugernavn", SqlDbType.NVarChar).Value = inputBrugernavn.Text;
+        cmd.Parameters.Add("@password", SqlDbType.NText).Value = inputPassword1.Text;
 
         // Åben for forbindelsen til databasen
         conn.Open();
@@ -38,7 +38,7 @@ public partial class _Default : System.Web.UI.Page
             // Gem informationer om login i Session
             Session["bruger_id"] = reader["id"];
             // Send brugeren videre
-            Response.Redirect("BrugereSDS.aspx");
+            Response.Redirect("brugere.aspx");
         }
         else
         {

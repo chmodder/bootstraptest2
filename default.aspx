@@ -11,18 +11,16 @@
     </asp:Panel>
 
     <div class="form-group">
-        <label class="col-lg-2 control-label">Email</label>
+        <label class="col-lg-2 control-label">Brugernavn</label>
         <div class="col-lg-10">
-            <asp:TextBox ID="inputEmail1" CssClass="form-control" Placeholder="Email" runat="server"></asp:TextBox>
-            <%--<input type="email" class="form-control" id="inputEmail1" placeholder="Email">--%>
+            <asp:TextBox ID="inputBrugernavn" CssClass="form-control" Placeholder="Brugernavn" runat="server"></asp:TextBox>
         </div>
 
     </div>
     <div class="form-group">
         <label class="col-lg-2 control-label">Password</label>
         <div class="col-lg-10">
-            <asp:TextBox ID="inputPassword1" CssClass="form-control" Placeholder="Password" runat="server"></asp:TextBox>
-            <%--<input type="password" class="form-control" id="inputPassword1" placeholder="Password">--%>
+            <asp:TextBox ID="inputPassword1" CssClass="form-control" TextMode="Password" Placeholder="Password" runat="server"></asp:TextBox>
         </div>
 
     </div>

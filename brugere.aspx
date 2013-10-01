@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <asp:SqlDataSource ID="SqlDataBrugere" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [brugere] ORDER BY [Id], [navn]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataBrugere" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [brugere] ORDER BY [Id], [brugernavn]"></asp:SqlDataSource>
 
         <table class="table table-striped">
 
@@ -25,7 +25,7 @@
 
             <tr>
                 <th><%# Eval ("Id") %></th>
-                <th><%# Eval ("navn") %></th>
+                <th><%# Eval ("brugernavn") %></th>
                 <th><%# Eval ("email") %></th>
                 <th><%# Eval ("telefon") %></th>
                 <th><%# Eval ("password") %></th>

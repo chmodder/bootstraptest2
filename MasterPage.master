@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
-
+<html>
 <head runat="server">
    <title></title>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
