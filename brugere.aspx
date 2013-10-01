@@ -16,7 +16,7 @@
             <th>Password</th>
         </tr>
 
-    <asp:Repeater ID="RepeaterBrugere" DataSourceID="SqlDataBrugere" runat="server"></asp:Repeater>
+    <asp:Repeater ID="RepeaterBrugere" DataSourceID="SqlDataBrugere" runat="server">
 
     
 
@@ -33,7 +33,7 @@
 
         </ItemTemplate>
 
-
+</asp:Repeater>
 
     </table>
 
