@@ -49,4 +49,9 @@ public partial class _Default : System.Web.UI.Page
         // Luk for forbindelsen til databasen
         conn.Close();
     }
+
+    protected void ButtonOpret_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("opretbruger.aspx");
+    }
 }

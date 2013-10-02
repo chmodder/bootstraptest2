@@ -38,9 +38,17 @@
     <div class="form-group">
         <div class="col-lg-offset-2 col-lg-10">
             <%--<button type="submit" class="btn btn-default">Sign in</button>--%>
-            <asp:Button ID="ButtonLogin" runat="server" Text="Login" CssClass="btn btn-default" OnClick="ButtonLogin_Click" />
+            <asp:Button ID="ButtonLogin" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="ButtonLogin_Click" />
         </div>
     </div>
+    
+    <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+            <%--<button type="submit" class="btn btn-default">Sign in</button>--%>
+            <asp:Button ID="ButtonOpret" runat="server" Text="Opret bruger" CssClass="btn btn-default" OnClick="ButtonOpret_Click" />
+        </div>
+    </div>
+
 
 
 </asp:Content>
