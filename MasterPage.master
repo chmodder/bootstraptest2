@@ -36,7 +36,7 @@
       <li><a href="default.aspx">Forside</a></li>
       <li><a href="brugere.aspx">Brugere</a></li>
     </ul>
-    
+      <asp:Button ID="logout" runat="server" CssClass="btn btn-default" Text="Log out" OnClick="logoutClick" Visible="False" />
   </div><!-- /.navbar-collapse -->
 </nav>
         <div class="container">
