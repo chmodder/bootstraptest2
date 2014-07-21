@@ -20,12 +20,16 @@ public partial class redigerbruger : System.Web.UI.Page
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
+
             // SQL strengen
             cmd.CommandText = "SELECT * FROM [Brugere] WHERE [Id] = @id";
+
             // Tilføj parametrer fra URL til din SQL streng
             cmd.Parameters.Add("@id", SqlDbType.NVarChar).Value = Request.QueryString["Id"];
+
             // Åben for forbindelsen til databasen
             conn.Open();
+
             // Udfør SQL komandoen
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
@@ -55,6 +59,7 @@ public partial class redigerbruger : System.Web.UI.Page
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
+
             //Sql sætningen
             cmd.CommandText = "UPDATE [Brugere] SET [brugernavn] = @brugernavn, [Email] = @email, [Telefon] = @telefon, [Avatar] = @avatar, [Password] = @password WHERE [Id] = @id";
             // Parametrene @id, @title og @tekst i sql sætningen ovenover tilføjes
@@ -63,7 +68,8 @@ public partial class redigerbruger : System.Web.UI.Page
             cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = TextBoxEmail.Text;
             cmd.Parameters.Add("@telefon", SqlDbType.Int).Value = TextBoxTelefon.Text;
             cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = TextBoxPassword.Text;
-            // HVsi der er valgt en nu fil
+
+            // Hvis der er valgt en nu fil
             if (FileUploadAvatar.HasFile)
             {
                 cmd.Parameters.Add("@avatar", SqlDbType.NVarChar).Value = FileUploadAvatar.FileName;
@@ -75,6 +81,7 @@ public partial class redigerbruger : System.Web.UI.Page
                 // Kald Metoden MakeThumbs, som laver en Thumbnail og uploader den til Thumbs mappen
                 MakeThumb(FileUploadAvatar.FileName, "/Images/Upload/Original/", 120, "/Images/Upload/Thumbs/");
             }
+
             // Hvis der ikke er valgt en ny fil
             else
             {
